@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="'ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Animated Login Form</title>
+    <link rel="stylesheet" href="project.css">
+  </head>
+  <body>
+    <div class="center">
+       <h1>Login</h1> 
+       <form method="post" na>
+        <div class="txt_field">
+            <input type="text" name="User Name" id="email" required>
+            <label for="User Name">Email Address</label>
+            <span></span>
+        </div>
+        <div class="txt_field">
+            <input type="password" name="Password" id="password" required>
+            <span></span>
+            <label for="Password">Password</label>
+        </div>
+        <input type="submit" value="Login" class="submit-btn" onclick="auth()"/>
+    </form>
+    </div>
+    <script>
+        function auth(){
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+          if(email== "user@gmail.com" && password=="user123"){
+            window.location.assign("index.html");
+            alert("Login Successful");
+          }
+          else{
+            alert("Invalid Information");
+            return;
+          }
+        }
+      </script>
+  </body>
+</html>
